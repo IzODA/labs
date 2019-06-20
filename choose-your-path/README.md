@@ -16,7 +16,7 @@
     - [Connecting through Windows](#connecting-through-windows)
     - [Connecting through Mac](#connecting-through-mac)
 - [Choosing Your Lab](#choosing-your-lab)
-- [Spark / Scala Lab](#spark-/-scala-lab)
+- [Spark / Scala Lab](#spark--scala-lab)
   - [Starting up spark-shell](#starting-up-spark-shell)
   - [Working with our data](#working-with-our-data)
     - [Loading our data](#loading-our-data)
@@ -32,7 +32,7 @@
   - [Spark through a jupyter notebook](#spark-through-a-jupyter-notebook)
     - [Starting the jupyter notebook for Spark](#starting-the-jupyter-notebook-for-spark)
     - [Viewing the Spark jupyter notebooks](#viewing-the-spark-jupyter-notebooks)
-- [Anaconda / Python Lab](#anaconda-/-python-lab)
+- [Anaconda / Python Lab](#anaconda--python-lab)
   - [Starting up the python interpreter](#starting-up-the-python-interpreter)
   - [Anaconda and its environments](#anaconda-and-its-environments)
   - [Python through a jupyter notebook](#python-through-a-jupyter-notebook)
@@ -115,9 +115,9 @@ lab you are doing today:
      2 - Anaconda and Python
 ```
 - Type `1` followed by `ENTER` to begin working on the Spark and Scala lab. 
-[Spark / Scala Lab](#spark-/-scala-lab)
+[Spark / Scala Lab](#spark--scala-lab)
 - Type `2` followed by `ENTER` to begin working on the Anaconda and Python lab. 
-[Anacond / Python Lab](#anaconda-/-python-lab)
+[Anacond / Python Lab](#anaconda--python-lab)
 
 ___
 
@@ -429,7 +429,7 @@ First we will want to load our visualization package known as brunel.
 Issue the following command in the first open cell:
 
 ```
-%AddJar -magic https://brunelvis.org/jar/spark-kernel-brunel-all-2.3.jar
+%AddJar -magic file:../../jars/spark-kernel-brunel-all-2.3.jar
 ```
 
 The Apache Toree kernel allows us to load brunel as a magic, which allows us to 
@@ -485,7 +485,7 @@ you can visit the
 Thank you for choosing to participate in this lab today, you may:
 - Try looking at a couple other pre-populated notebooks available in the jupyter notebook
 server simply by closing out of this notebook by going to `File` -> `Close and Halt`.
-- Trying out the Anaconda and Python Lab. *Please let your lab instructor know
+- Trying out the Anaconda and Python Lab? *Please let your lab instructor know
 so we can reset your environment for you.*
 ___
 
@@ -935,7 +935,7 @@ direction in your search.
 Thank you for choosing to participate in this lab today, you may:
 - Try looking at a couple other pre-populated notebooks available in the jupyter notebook
 server simply by closing out of this notebook by going to `File` -> `Close and Halt`.
-- Trying out the Spark and Scala Lab. *Please let your lab instructor know
+- Trying out the Spark and Scala Lab? *Please let your lab instructor know
 so we can reset your environment for you.*
 ___
 
