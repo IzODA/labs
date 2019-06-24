@@ -424,6 +424,14 @@ several cells filled in with code already. Run these cells to repeat what we've
 done already in our Unix environment. Although we've come up with the same conclusion, 
 lets see what additional validation we can get by simply visualizing the data.
 
+*Note - The visual package, Brunel-Visualization, has current restrictions for Windows
+10 browsers. When the cell is run, the cell will complete, but no visualization will
+appear. In the event this is the case, pictures have been provided.*
+
+[brunel-jobnames]: images/brunel-jobnames.png "brunel-jobnames"
+[brunel-userids]: images/brunel-userids.png "brunel-userids"
+[brunel-pie-userids]: images/brunel-pie-userids.png "brunel-pie-userids"
+
 First we will want to load our visualization package known as brunel.
 
 Issue the following command in the first open cell:
@@ -456,11 +464,15 @@ Issue the following command in the cell:
 %%brunel data('jobsTop10') bar x(SMF30JBN) y(count)
 ```
 
+!["brunel-jobnames"][brunel-jobnames]
+
 Issue the following command in the cell:
 
 ```
 %%brunel data('usersTop10') bar x(SMF30RUD) y(count)
 ```
+
+!["brunel-userids"][brunel-userids]
 
 The bargraphs that we displayed in the last two cells, starts to gives us a better
 representation of our data. With this data however, a bar graph may not be the
@@ -472,6 +484,8 @@ Issue the following command in the cell:
 ```
 %%brunel data('usersTop10') stack polar bar x(SMF30RUD) y(count) color(SMF30RUD) label(SMF30RUD)
 ```
+
+!["brunel-pie-userids"][brunel-pie-userids]
 
 Although we are graphing the same data, the pie graph shows the magnitude of what
 our culprit has cause.
