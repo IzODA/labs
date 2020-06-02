@@ -87,7 +87,7 @@ Locate and start-up the PuTTY application on your system. Once launched add the 
 hostname: 
 
 ```
-mvs1.centers.ihost.com
+share.centers.ihost.com
 ``` 
 
 Once hostname has been entered, click `Open`. You may receive a popup to verify server's 
@@ -98,7 +98,7 @@ Launch Mac terminal. Once launched, you are going to ssh into the server, using 
 username, with the following command:
 
 ```
-ssh -c aes128-cbc $PROVIDED_USERNAME@mvs1.centers.ihost.com
+ssh -c aes128-cbc $PROVIDED_USERNAME@share.centers.ihost.com
 ``` 
 
 You may receive a popup to verify server's host key. Click accept to continue.
