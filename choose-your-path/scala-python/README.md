@@ -436,6 +436,7 @@ appear. In the event this is the case, pictures have been provided.*
 First we will want to load our visualization package known as brunel.
 
 Issue the following command in the first open cell:
+_Note: Be sure to update $USER with your assigned user._
 
 ```
 %AddJar -magic file:/u/$USER/izodalab/jars/spark-kernel-brunel-all-2.6.jar
