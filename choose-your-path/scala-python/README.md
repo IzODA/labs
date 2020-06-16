@@ -422,7 +422,8 @@ You will want to copy and paste this URL into your browser.
 Launch the notebook `choose-your-path-scala.ipynb`. Once loaded, you will see the first
 several cells filled in with code already. Run these cells to repeat what we've 
 done already in our Unix environment. Although we've come up with the same conclusion, 
-lets see what additional validation we can get by simply visualizing the data.
+lets see what additional validation we can get by simply visualizing the data. _Note:
+there may be a delay while the Apache Toree kernel loads._
 
 *Note - The visual package, Brunel-Visualization, has current restrictions for Windows
 10 browsers. When the cell is run, the cell will complete, but no visualization will
@@ -437,7 +438,7 @@ First we will want to load our visualization package known as brunel.
 Issue the following command in the first open cell:
 
 ```
-%AddJar -magic file:../../jars/spark-kernel-brunel-all-2.3.jar
+%AddJar -magic file:/u/$USER/izodalab/jars/spark-kernel-brunel-all-2.6.jar
 ```
 
 The Apache Toree kernel allows us to load brunel as a magic, which allows us to 
