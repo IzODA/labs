@@ -436,7 +436,8 @@ appear. In the event this is the case, pictures have been provided.*
 First we will want to load our visualization package known as brunel.
 
 Issue the following command in the first open cell:
-_Note: Be sure to update $USER with your assigned user._
+_Note: Be sure to update $USER with your assigned user. Be sure the userid
+is listed in lowercase. For example: file:/u/izodaa1/izodalab..._
 
 ```
 %AddJar -magic file:/u/$USER/izodalab/jars/spark-kernel-brunel-all-2.6.jar
@@ -559,7 +560,9 @@ sum = 0
 
 Next we can create a simple for-loop, to iterate through our numbers and add it to our
 sum. *Be aware that, python follows white-space rules and requires indentations to be 
-used when applicable.*
+used when applicable. For example, in the below command after you type the for loop
+line, you will need to press tab to write the sum += num line. Lastly, to end the loop
+you will hit enter, to leave a blank line.*
 
 Issue the following command:
 
