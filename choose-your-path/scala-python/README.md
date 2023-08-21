@@ -1,8 +1,8 @@
-# IBM Open Data Analytics for z/OS: Choose Your Path—Spark and Scala or Anaconda and Python
+# Your Journey to Open Data Analytics on z/OS: Choose Your Path—Spark and Scala or IBM Enterprise Python/Python AI Toolkit
 
 <!-- # Licensed Materials - Property of IBM
-# 5655-OD1
-# COPYRIGHT IBM CORP. 2019
+# 5698-SPK, 5698-PAL
+# COPYRIGHT IBM CORP. 2023
 #
 # US Government Users Restricted Rights - Use, duplication or
 # disclosure restricted by GSA ADP Schedule Contract with
@@ -32,9 +32,9 @@
   - [Spark through a jupyter notebook](#spark-through-a-jupyter-notebook)
     - [Starting the jupyter notebook for Spark](#starting-the-jupyter-notebook-for-spark)
     - [Viewing the Spark jupyter notebooks](#viewing-the-spark-jupyter-notebooks)
-- [Anaconda / Python Lab](#anaconda--python-lab)
+- [Python, pip and virtualenvs / Python Lab](#anaconda--python-lab)
   - [Starting up the python interpreter](#starting-up-the-python-interpreter)
-  - [Anaconda and its environments](#anaconda-and-its-environments)
+  - [Python, pip and virtualenvs](#anaconda-and-its-environments)
   - [Python through a jupyter notebook](#python-through-a-jupyter-notebook)
     - [Starting the jupyter notebook for Python](#starting-the-jupyter-notebook-for-python)
     - [Viewing the Python jupyter notebooks](#viewing-the-python-jupyter-notebooks)
@@ -49,12 +49,12 @@
 
 
 ## Overview
-Join us for a lab all about IBM Open Data Analytics for z/OS's two analytic stacks. 
-Choose between Spark and the Scala programming language or Anaconda and the Python 
-programming language. Choosing the Spark analytic stack, we will dive into z/OS data, 
+Join us for a lab all about Your Journey to Open Data Analytics on z/OS's two analytic stacks. 
+Choose between Spark and the Scala programming language or Python, pip and the virtualenv 
+environment. Choosing the Spark analytic stack, we will dive into z/OS data, 
 such as SMF datasets, to investigate the data, visualize it, and finally grab various 
-SMF operational insights. Choosing the Anaconda analytics stack, we will dive into 
-Anaconda environments along with the various data analytics packages, as well as work 
+SMF operational insights. Choosing the Python AI Toolkit analytics stack, we will dive into 
+virtualenv environments along with the various data analytics packages, as well as work 
 in Python to dive into z/OS data to gather various insights. If you're able to complete 
 one analytics stack, you may choose to continue onto the other, all within this one lab.
 
@@ -112,11 +112,11 @@ choose your lab.
 Enter the number corresponding to which IBM Open Data Analytics 
 lab you are doing today:
      1 - Spark and Scala
-     2 - Anaconda and Python
+     2 - Python AI Toolkit and Python
 ```
 - Type `1` followed by `ENTER` to begin working on the Spark and Scala lab. 
 [Spark / Scala Lab](#spark--scala-lab)
-- Type `2` followed by `ENTER` to begin working on the Anaconda and Python lab. 
+- Type `2` followed by `ENTER` to begin working on the Python AI Toolkit and Python lab. 
 [Anacond / Python Lab](#anaconda--python-lab)
 
 ___
@@ -152,28 +152,27 @@ reference Spark and it's available executables under the bin directory.
 Once you launch the spark-shell, you will see a scala prompt on the bottom.
 
 ```
-Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to "WARN".
-To adjust logging level use sc.setLogLevel(newLevel).
-19/02/10 16:16:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-19/02/10 16:16:06 WARN NetUtil: Failed to find the loopback interface
-19/02/10 16:16:12 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
-Spark context Web UI available at http://x.x.x.x:xxxx
-Spark context available as 'sc' (master = local, app id = local-1549833367079).
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/08/21 16:48:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/08/21 16:48:20 WARN SecurityManager: spark.zos.master.authenticate.method ATTLS specified, but z/OS client authentication is disabled. The authentication method is ignored.
+23/08/21 16:48:21 WARN MacAddressUtil: Failed to find a usable hardware address from the network interfaces; using random bytes: 8c:87:17:ee:95:41:9a:9a
+Spark context Web UI available at http://xxxx.xxx.xxx.xxx:pppp
+Spark context available as 'sc' (master = local[*], app id = local-1692650901717).
 Spark session available as 'spark'.
 Welcome to
       ____              __
      / __/__  ___ _____/ /__
     _\ \/ _ \/ _ `/ __/  '_/
-   /___/ .__/\_,_/_/ /_/\_\   version 2.2.0
+   /___/ .__/\_,_/_/ /_/\_\   version 3.2.0
       /_/
-         
-IBM Open Data Analytics for z/OS - Spark Version 2.2.0
-Using Scala version 2.11.8, Java JRE 1.8.0_171
+
+IBM Z Platform for Apache Spark - Spark Version 3.2.0
+Using Scala version 2.12.15, Java JRE 11.0.18
 Type in expressions to have them evaluated.
 Type :help for more information.
 
-scala> 
+scala>
 ```
 
 ### Working with our data
@@ -502,14 +501,14 @@ you can visit the
 Thank you for choosing to participate in this lab today, you may:
 - Try looking at a couple other pre-populated notebooks available in the jupyter notebook
 server simply by closing out of this notebook by going to `File` -> `Close and Halt`.
-- Trying out the Anaconda and Python Lab? *Please let your lab instructor know
+- Trying out the Python AI Toolkit and Python Lab? *Please let your lab instructor know
 so we can reset your environment for you.*
 ___
 
 ## Anaconda / Python Lab
 In today's lab you will learn about:
 - Python interpreter along with some basic python programming
-- Anaconda package manager and how environments work
+- PIP package manager and how environments work
 - Discovering who the cause of our issue is
 - Jupyter notebook environments
 - Read SMF data from an USS file containing SMF30 records into a pandas DataFrame
@@ -530,9 +529,9 @@ When the python interpreter launches, you will see the version of python running
 the >>> prompt.
 
 ```
-Python 3.6.1 (heads/v3.6.1-anaconda:00f76f8, Feb 21 2018, 05:07:54) [C] on zos
+Python 3.11.4 (heads/pyz_dev-3.11.ziip:39640ccf4b, Jul 15 2023, 05:46:13) [Clang 14.0.0 ] on zos
 Type "help", "copyright", "credits" or "license" for more information.
->>> 
+>>>
 ```
 
 Now that we are inside of our python interpreter, lets do some basic python programming.
@@ -585,8 +584,8 @@ print(sum)
 When you hit enter, you will see the output of 45.
 
 Now that we've taken a small look into python, lets dive a bit into the package 
-manager known as Anaconda. As part of IBM Open Data Analytics for z/OS, over 200+
-packages have been brought into z/OS and is managed by Anaconda. By default all
+manager known as PIP. As part of the Python AI Toolkit, over 200+
+packages have been brought into z/OS and are managed using 'pip' package management. By default all
 these packages are made available to us. While inside the python interpreter we
 can attempt to import some of these packages.
 
@@ -601,11 +600,11 @@ You can see where they're imported from by simply calling the package you import
 
 ```
 >>> np
-<module 'numpy' from '/usr/lpp/IBM/izoda/anaconda/lib/python3.6/site-packages/numpy/__init__.py'>
+<module 'numpy' from '/usr/lpp/IBM/cyp/v3r11/pyz/lib/python3.11/site-packages/numpy/__init__.py'>
 ```
 
 This and other packages are available to you because they're already in your 
-environment. Lets look at how Anaconda environments work. 
+environment. Lets look at how virtualenv environments work. 
 
 Exit out of the python interpreter by issuing the following command:
 
@@ -613,43 +612,43 @@ Exit out of the python interpreter by issuing the following command:
 quit()
 ```
 
-### Anaconda and its environments
-By default, Anaconda contains a root environment that contains all available packages
+### Python, PIP and virtual environments
+By default, Python contains a root environment that contains all available packages
 that have been installed on the system. Lets take a look at the available packages
-inside of Anaconda.
+inside of PIP.
 
 Issue the following command:
 
 ```
-conda list
+pip3 list
 ```
 
-You will see a long list of available packages. Each row lists information about a 
-given package. Each package has a version and the location they were installed from.
+You will see a short list of available packages. Each row lists information about a 
+given package. Each package has a version number.
 
 ```
-# packages in environment at /usr/lpp/IBM/izoda/anaconda:
-#
-alabaster                 0.7.10                   py36_0    file:///usr/lpp/IBM/izoda/anaconda/channels/IzODA
-alembic                   0.9.1                    py36_0    file:///usr/lpp/IBM/izoda/anaconda/channels/IzODA
-anaconda                  1.1.0                         6    file:///usr/lpp/IBM/izoda/anaconda/channels/IzODA
-anaconda-client           1.2.2                    py36_0    file:///usr/lpp/IBM/izoda/anaconda/channels/IzODA
-...
-xlwt                      1.2.0                    py36_0    file:///usr/lpp/IBM/izoda/anaconda/channels/IzODA
-xz                        5.2.3                         0    file:///usr/lpp/IBM/izoda/anaconda/channels/IzODA
-yaml                      0.1.6                         1    file:///usr/lpp/IBM/izoda/anaconda/channels/IzODA
-zeromq                    4.2.1                         2    file:///usr/lpp/IBM/izoda/anaconda/channels/IzODA
-zlib                      1.2.11                        1    file:///usr/lpp/IBM/izoda/anaconda/channels/IzODA
+Package      Version
+------------ -------
+cffi         1.14.6
+cryptography 3.3.2
+ebcdic       1.1.1
+numpy        1.23.4
+pip          23.1.2
+pycparser    2.20
+setuptools   65.6.3
+six          1.16.0
+zos-util     1.0.0
 ```
 
 Most times you do not need all of these packages, or you may require a certain version
-of a package. This is where Anaconda environments come into play. Lets start by creating
+of a package. This is where virtual environments come into play. Lets start by creating
 an environment that only contains python in it.
 
-Issue the following command:
+Issue the following commands:
 
 ```
-conda create -n myEnv python
+python3 -m venv myenv
+source myenv/bin/activate
 ```
 
 As you can see in the command, we are creating an environment, with a name myEnv,
